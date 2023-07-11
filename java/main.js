@@ -291,4 +291,27 @@ var questions = [
   
 
 
-  //DOM elements
+// -- DOM elements by section --
+
+
+// -- Nav DOM elements --
+
+var timerEl = document.getElementById("timer");
+var secondsEl = document.getElementById("seconds");
+
+// -- question DOM elements -- 
+
+var quizIntroEl = document.getElementById("quiz-global-intro");
+var quizIntroBtnEl = document.getElementById("quiz-global-intro-start");
+var questionContainerEl = document.getElementById("question-global-box");
+var questionEl = document.getElementById("question-text");
+var answerChoicesEl = document.getElementById("choices-global");
+var choiceOneEl = document.getElementById("choice1");
+var choiceTwoEl = document.getElementById("choice2");
+var choiceThreeEl = document.getElementById("choice3");
+var choiceFourEl = document.getElementById("choice4");
+var choicesFeedbackEl = document.getElementById("choices-feedback");
+
+
+// -- Highscore DOM elements --
+
