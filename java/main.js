@@ -110,24 +110,3 @@ var questions = [
     }
   ];
   
-
-
-// What is the correct syntax for declaring a variable in JavaScript? a) var x; b) x = 5; c) variable x; d) int x; Correct answer: a
-
-// How do you write "Hello, World!" in an alert box? a) console.log("Hello, World!"); b) alertBox("Hello, World!"); c) alert("Hello, World!"); d) document.write("Hello, World!"); Correct answer: c
-
-// What is the correct way to write a JavaScript comment? a) b) //This is a comment c) /This is a comment/ d) \This is a comment Correct answer: b
-
-// How do you declare a function in JavaScript? a) function myFunction() b) function = myFunction() c) var myFunction = function() d) def myFunction() Correct answer: a
-
-// How do you call a function named "myFunction"? a) call myFunction() b) myFunction() c) execute myFunction() d) run myFunction() Correct answer: b
-
-// Which operator is used to assign a value to a variable in JavaScript? a) = b) == c) := d) => Correct answer: a
-
-// What is the correct way to write a conditional statement in JavaScript? a) if x = 5 then b) if x == 5 c) if (x = 5) d) if (x == 5) Correct answer: d
-
-// How do you concatenate two strings in JavaScript? a) string1 + string2 b) string1 . string2 c) string1 & string2 d) string1 ~ string2 Correct answer: a
-
-// How do you write a for loop in JavaScript? a) loop(x=0; x<5; x++) b) for (x=0; x<5; x++) c) for loop(x=0; x<5; x++) d) iterate(x=0; x<5; x++) Correct answer: b
-
-// What function is used to convert a string to a number in JavaScript? a) convertStringToNumber() b) parseInt() c) stringToNumber() d) toNumber() Correct answer: b
