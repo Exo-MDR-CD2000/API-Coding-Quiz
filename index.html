@@ -9,15 +9,40 @@
 </head>
 <body>
  <h1>JavaScript Quiz</h1>
+<nav>
+    <ul>
+        <a href="highscore.html">High Score</a>
+        <div id="timer">Time: <span id="seconds">0</span></div>
+    </ul>
+    
+</nav>
+    <div id="Quiz Intro">
+        <h2>Test your knowledge of JavaScript!</h2>
+        <p>Click the button below to start the quiz. You will be presented with JavaScript centric questions with four multiple chopice answers. Answer correctly and precede to the next question or until time runs out. Your score will be determined on how fast you complete the quiz.</p>
+        <button id="start">Start Quiz</button>
+    </div>
+
+    <div id="question-global-box">
     <div id="question"></div>
-    <ul id="choices"></ul>
-    <button id="submit">Submit</button>
-    <div id="timer">Time: <span id="seconds">0</span></div>
-  
-    <nav>
-      <a href="highscore.html">High Score</a>
-    </nav>
-  
+    <div id="choices">
+        <div id="choice1"> <button></button></div>
+        <div id="choice2"> <button></button></div>
+        <div id="choice3"> <button></button></div>
+        <div id="choice4"> <button></button></div>
+    <div id="feedback-choices"></div> 
+    <!-- the above div will hopefully display if the selected answer was right or wrong using js -->
+    </div>
+    </div>
+
+    <div id="highscore-global-box">
+        <h2 id="end-quiz"> Quiz End!</h2>
+        <form id="highscore-form">
+            <label for="initials">Enter your initials:</label>
+            <input type="text" id="initials" name="initials" maxlength="3">
+            <button id="submit-highscore">Submit highscore</button>
+        </form>
+    </div>
+
     <script src="main.js"></script>
     <script src="highscore.js"></script>
 </body>
