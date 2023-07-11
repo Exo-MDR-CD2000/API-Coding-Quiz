@@ -5,8 +5,7 @@
 
 
 
-// quiz questions
-// for reference: [a=0, b=1, c=2, d=3,]
+// quiz questions ---- for reference: [a=0, b=1, c=2, d=3,] ----
 var questions = [
     {
       question: "What is the correct syntax for declaring a variable in JavaScript?",
@@ -107,6 +106,190 @@ var questions = [
         "d) toNumber()"
       ],
       answer: 1
-    }
+    },
+    {
+        question: "What is the output of the following code: console.log(typeof 'hello');",
+        choices: [
+          "undefined",
+          "number",
+          "string",
+          "boolean",
+        ],
+        correctAnswer: 2
+      },
+      {
+        question: "How do you convert a string to uppercase in JavaScript?",
+        choices: [
+          "toLowerCase()",
+          "toUpperCase()",
+          "toUpperCasecase()",
+          "toUppercase()",
+        ],
+        correctAnswer: 1
+      },
+      {
+        question: "Which method is used to remove the last item from an array in JavaScript?",
+        choices: [
+          "slice()",
+          "pop()",
+          "remove()",
+          "splice()",
+        ],
+        correctAnswer: 1
+      },
+      {
+        question: "What does the '!' operator do in JavaScript?",
+        choices: [
+          "Logical OR",
+          "Logical XOR",
+          "Logical AND",
+          "Logical NOT",
+        ],
+        correctAnswer: 3
+      },
+      {
+        question: "Which built-in method returns the length of a string in JavaScript?",
+        choices: [
+          "count()",
+          "length()",
+          "size()",
+          "getSize()",
+        ],
+        correctAnswer: 1
+      },
+      {
+        question: "What is the output of the following code: console.log(5 + '5');",
+        choices: [
+          "10",
+          "Error",
+          "25",
+          "55",
+        ],
+        correctAnswer: 3
+      },
+      {
+        question: "Which method is used to add new elements to the end of an array in JavaScript?",
+        choices: [
+          "concat()",
+          "add()",
+          "append()",
+          "push()",
+        ],
+        correctAnswer: 3
+      },
+      {
+        question: "What is the output of the following code: console.log(Number('10') + 5);",
+        choices: [
+          "Error",
+          "NaN",
+          "105",
+          "15",
+        ],
+        correctAnswer: 3
+      },
+      {
+        question: "Which operator is used to check if two values are equal and of the same type in JavaScript?",
+        choices: [
+          "==",
+          "=",
+          "===",
+          "!=",
+        ],
+        correctAnswer: 2
+      },
+      {
+        question: "Which event is triggered when the user clicks on an HTML element?",
+        choices: [
+          "onchange",
+          "onload",
+          "onsubmit",
+          "onclick",
+        ],
+        correctAnswer: 3
+      },
+      {
+        question: "Which operator is used to assign a default value to a variable if the current value is null or undefined?", 
+        choices: [
+            "||=",
+            "??=",
+            "??",
+            "||",
+        ]
+        answer: 2
+      },
+      {
+        question: "What is the output of the following code: console.log(typeof 10);",
+        choices: [
+          "undefined",
+          "number",
+          "string",
+          "boolean",
+        ],
+        correctAnswer: 1
+      },
+      {
+        question: "How do you convert a string to lowercase in JavaScript?",
+        choices: [
+          "toLowerCase()",
+          "toUpperCase()",
+          "toUpperCasecase()",
+          "toUppercase()",
+        ],
+        correctAnswer: 0
+      },
+      {
+        question: "Which method is used to remove the first item from an array in JavaScript?",
+        choices: [
+          "slice()",
+          "shift()",
+          "remove()",
+          "splice()",
+        ],
+        correctAnswer: 1
+      },
+      {
+        question: "What does the '&&' operator do in JavaScript?",
+        choices: [
+          "Logical OR",
+          "Logical XOR",
+          "Logical AND",
+          "Logical NOT",
+        ],
+        correctAnswer: 2
+      },
+      {
+        question: "Which built-in method removes the last element from an array and returns it?",
+        choices: [
+          "delete()",
+          "pop()",
+          "remove()",
+          "splice()",
+        ],
+        correctAnswer: 1
+      },
+      {
+        question: "What is the output of the following code: console.log('hello'.length);",
+        choices: [
+          "6",
+          "Error",
+          "5",
+          "0",
+        ],
+        correctAnswer: 2
+      },
+      {
+        question: "Which method is used to add new elements to the beginning of an array in JavaScript?",
+        choices: [
+          "concat()",
+          "add()",
+          "append()",
+          "unshift()",
+        ],
+        correctAnswer: 3
+      },
   ];
+  
+
+
+  //DOM elements
   
