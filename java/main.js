@@ -115,7 +115,7 @@ var questions = [
           "string",
           "boolean",
         ],
-        correctAnswer: 2
+        answer: 2
       },
       {
         question: "How do you convert a string to uppercase in JavaScript?",
@@ -125,7 +125,7 @@ var questions = [
           "toUpperCasecase()",
           "toUppercase()",
         ],
-        correctAnswer: 1
+        answer: 1
       },
       {
         question: "Which method is used to remove the last item from an array in JavaScript?",
@@ -135,7 +135,7 @@ var questions = [
           "remove()",
           "splice()",
         ],
-        correctAnswer: 1
+        answer: 1
       },
       {
         question: "What does the '!' operator do in JavaScript?",
@@ -145,7 +145,7 @@ var questions = [
           "Logical AND",
           "Logical NOT",
         ],
-        correctAnswer: 3
+        answer: 3
       },
       {
         question: "Which built-in method returns the length of a string in JavaScript?",
@@ -155,7 +155,7 @@ var questions = [
           "size()",
           "getSize()",
         ],
-        correctAnswer: 1
+        answer: 1
       },
       {
         question: "What is the output of the following code: console.log(5 + '5');",
@@ -165,7 +165,7 @@ var questions = [
           "25",
           "55",
         ],
-        correctAnswer: 3
+        answer: 3
       },
       {
         question: "Which method is used to add new elements to the end of an array in JavaScript?",
@@ -175,7 +175,7 @@ var questions = [
           "append()",
           "push()",
         ],
-        correctAnswer: 3
+        answer: 3
       },
       {
         question: "What is the output of the following code: console.log(Number('10') + 5);",
@@ -185,7 +185,7 @@ var questions = [
           "105",
           "15",
         ],
-        correctAnswer: 3
+        answer: 3
       },
       {
         question: "Which operator is used to check if two values are equal and of the same type in JavaScript?",
@@ -195,7 +195,7 @@ var questions = [
           "===",
           "!=",
         ],
-        correctAnswer: 2
+        answer: 2
       },
       {
         question: "Which event is triggered when the user clicks on an HTML element?",
@@ -205,7 +205,7 @@ var questions = [
           "onsubmit",
           "onclick",
         ],
-        correctAnswer: 3
+        answer: 3
       },
       {
         question: "Which operator is used to assign a default value to a variable if the current value is null or undefined?", 
@@ -225,7 +225,7 @@ var questions = [
           "string",
           "boolean",
         ],
-        correctAnswer: 1
+        answer: 1
       },
       {
         question: "How do you convert a string to lowercase in JavaScript?",
@@ -235,7 +235,7 @@ var questions = [
           "toUpperCasecase()",
           "toUppercase()",
         ],
-        correctAnswer: 0
+        answer: 0
       },
       {
         question: "Which method is used to remove the first item from an array in JavaScript?",
@@ -245,7 +245,7 @@ var questions = [
           "remove()",
           "splice()",
         ],
-        correctAnswer: 1
+        answer: 1
       },
       {
         question: "What does the '&&' operator do in JavaScript?",
@@ -255,7 +255,7 @@ var questions = [
           "Logical AND",
           "Logical NOT",
         ],
-        correctAnswer: 2
+        answer: 2
       },
       {
         question: "Which built-in method removes the last element from an array and returns it?",
@@ -265,7 +265,7 @@ var questions = [
           "remove()",
           "splice()",
         ],
-        correctAnswer: 1
+        answer: 1
       },
       {
         question: "What is the output of the following code: console.log('hello'.length);",
@@ -275,7 +275,7 @@ var questions = [
           "5",
           "0",
         ],
-        correctAnswer: 2
+        answer: 2
       },
       {
         question: "Which method is used to add new elements to the beginning of an array in JavaScript?",
@@ -285,11 +285,10 @@ var questions = [
           "append()",
           "unshift()",
         ],
-        correctAnswer: 3
+        answer: 3
       },
   ];
   
 
 
   //DOM elements
-  
