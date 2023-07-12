@@ -292,17 +292,19 @@ var questions = [
 
 
 // -- DOM elements by section --
-
-
 // -- Nav DOM elements --
 
 var timerEl = document.getElementById("timer");
 var secondsEl = document.getElementById("seconds");
 
-// -- question DOM elements -- 
+
+// -- Intro DOM elements --
 
 var quizIntroEl = document.getElementById("quiz-global-intro");
 var quizIntroBtnEl = document.getElementById("quiz-global-intro-start");
+
+// -- Question DOM elements -- 
+
 var questionContainerEl = document.getElementById("question-global-box");
 var questionEl = document.getElementById("question-text");
 var answerChoicesEl = document.getElementById("choices-global");
@@ -315,3 +317,19 @@ var choicesFeedbackEl = document.getElementById("choices-feedback");
 
 // -- Highscore DOM elements --
 
+var highscoreContainerEl = document.getElementById("highscore-global-box");
+var highscoreTextEndEl = document.getElementById("end-quiz");
+var highscoreFormEl = document.getElementById("highscore-form");
+var highscoreInputInitialsEl = document.getElementById("initials");
+var highscoreSubmitBtnEl = document.getElementById("submit-highscore");
+
+// I need to display the quiz intro container first
+
+function startQuiz() {
+    quizIntroEl.style.display = "block";
+    questionContainerEl.style.display = "none";
+    highscoreContainerEl.style.display = "none";
+
+    // the above should hide the question container and highscore container while displaying the quiz intro container
+
+}
