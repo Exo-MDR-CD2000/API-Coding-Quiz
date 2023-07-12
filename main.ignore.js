@@ -227,3 +227,51 @@ if (userChoice === currentQuestion.choices[currentQuestion.answer]) {
       endQuiz();
     }
   }
+
+
+
+
+
+  // ------------------------------
+
+
+  function startTimer(seconds) {
+    remainingSeconds = seconds;
+    secondsEl.textContent = remainingSeconds;
+    timerInterval = setInterval(function() {
+      remainingSeconds--;
+      secondsEl.textContent = remainingSeconds;
+      if (remainingSeconds === 0) {
+        clearInterval(timerInterval);
+        alert("Time's up!");
+        confirm("Would you like to try again?");
+        refreshQuiz();
+      }
+    }, 1000);
+  }
+
+
+
+  function checkAnswer() {
+    var currentQuestion = questions[currentQuestionIndex];
+    var userChoice = this.textContent;
+    clearInterval(timerInterval); //stops the timer
+
+    //the above stops the timer but i need to add another if statement so that the timer resets when the user answers the next question
+    if (userChoice === currentQuestion.choices[currentQuestion.answer]) {
+      choicesFeedbackEl.textContent = "Correct!";
+    } else {
+      choicesFeedbackEl.textContent = "Wrong!";
+      remainingSeconds -= 5; // this should subtract 5 seconds from the timer
+    }
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+      startTimer(20);
+      displayQuestion();
+    } else {
+      endQuiz(); // this should check if the user has answered all the questions and if they have, it should end the quiz
+    }
+    setTimeout(function() {
+      choicesFeedbackEl.textContent = "";
+    }, 500);
+  }

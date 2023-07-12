@@ -1,6 +1,7 @@
 //global vars
 var currentQuestionIndex = 0;
-var secondsLeft = 0;
+var totalTimeinMemory = 0;
+var questionTime = 20;
 var timerInterval;
 var score = 0;
 
@@ -398,12 +399,17 @@ function checkAnswer() {
     //the above stops the timer but i need to add another if statement so that the timer resets when the user answers the next question
     if (userChoice === currentQuestion.choices[currentQuestion.answer]) {
         choicesFeedbackEl.textContent = "Correct!";
+        totalTimeinMemory += remainingSeconds;
     } else {
         choicesFeedbackEl.textContent = "Wrong!";
-        secondsLeft -= 5; // this should subtract 5 seconds from the timer
+        if (secondsLeft > 5) { //this checks if the timer is greater than 5 seconds, then
+            secondsLeft -= 5; // it subtract 5 seconds from the timer
+        } else { // if the timer is less than 5 seconds, then
+        secondsLeft = 0; // this should set the timer to 0
     }
     currentQuestionIndex++;
     if (currentQuestionIndex < questions.length) {
+      startTimer(questionTime);
     displayQuestion();
     } else {
       endQuiz(); // this should check if the user has answered all the questions and if they have, it should end the quiz
