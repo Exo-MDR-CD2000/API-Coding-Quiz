@@ -199,3 +199,31 @@ function checkAnswer() {
 var currentQuestion = questions[currentQuestionIndex];
 var userChoice = this.textContent;
 if (userChoice === currentQuestion.choices[currentQuestion.answer]) {
+
+
+
+
+
+
+
+  function checkAnswer() {
+    var currentQuestion = questions[currentQuestionIndex];
+    var userChoice = this.textContent;
+    clearInterval(timerInterval); // stop the timer
+    if (userChoice === currentQuestion.choices[currentQuestion.answer]) {
+      choicesFeedbackEl.textContent = "Correct!";
+    } else {
+      choicesFeedbackEl.textContent = "Wrong!";
+    }
+    setTimeout(function() {
+      choicesFeedbackEl.textContent = "";
+    }, 500);
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+      // start the timer again with the remaining seconds
+      startTimer(remainingSeconds);
+      displayQuestion();
+    } else {
+      endQuiz();
+    }
+  }

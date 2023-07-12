@@ -412,6 +412,10 @@ function checkAnswer() {
 
 }
 
+
+//TODO: my timer logic is flawd. the timer kee4ps going into the negatives and does not reset after the user answers a question. I need to fix this
+
+
 //lines 382-389 display the question and answer choices, but does not check if the user's answer is correct or not. It also does not display the next question when the user answers the current question
 
 //the above will display the question and the answer choices. it was originally four lines but I condensed it into a for loop
