@@ -165,3 +165,37 @@ function checkAnswer(event) {
   }
 }
 // END: ed8c6549bwf9
+
+
+
+
+
+
+function checkAnswer() {
+  var currentQuestion = questions[currentQuestionIndex];
+  var userChoice = // variable to store the user's selected choice
+
+  if (currentQuestion.answer === userChoice) {
+     choicesFeedbackEl.textContent = "Correct!";
+  } else {
+     choicesFeedbackEl.textContent = "Wrong!";
+     secondsLeft -= 5;
+  }
+  
+  currentQuestionIndex++;
+
+  if (currentQuestionIndex < questions.length) {
+     displayQuestion();
+  } else {
+     endQuiz();
+  }
+
+  setTimeout(function() {
+     choicesFeedbackEl.textContent = "";
+  }, 500);
+}
+
+
+var currentQuestion = questions[currentQuestionIndex];
+var userChoice = this.textContent;
+if (userChoice === currentQuestion.choices[currentQuestion.answer]) {

@@ -392,7 +392,8 @@ function displayQuestion() {
 
 function checkAnswer() {
     var currentQuestion = questions[currentQuestionIndex];
-    if (currentQuestion.answer === currentQuestion.choices[0]) {
+    var userChoice = this.textContent;
+    if (userChoice === currentQuestion.choices[currentQuestion.answer]) {
         choicesFeedbackEl.textContent = "Correct!";
     } else {
         choicesFeedbackEl.textContent = "Wrong!";
