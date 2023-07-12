@@ -1,6 +1,6 @@
 //global vars
 var currentQuestionIndex = 0;
-var secondsLeft = 60;
+var secondsLeft = 20;
 var timerInterval;
 var score = 0;
 
@@ -329,14 +329,34 @@ var highscoreSubmitBtnEl = document.getElementById("submit-highscore");
 // I need to display the quiz intro container first
 
 function startQuiz() {
-    quizIntroEl.style.display = "block";
-    questionContainerEl.style.display = "none";
+    quizIntroEl.style.display = "none";
+    questionContainerEl.style.display = "block";
     highscoreContainerEl.style.display = "none";
 
-    // the above should hide the question container and highscore container while displaying the quiz intro container
+    // the above should hide the quiz intro container and display the question container
 
-    // I need to start the timer when the quiz starts
+    // start the timer with 20 seconds for each question
+    secondsLeft = 20;
+    secondsEl.textContent = secondsLeft;
+    timerInterval = setInterval(function() {
+        secondsLeft--;
+        secondsEl.textContent = secondsLeft;
+        if (secondsLeft === 0) {
+            clearInterval(timerInterval);
+            endQuiz();
+        }
+    }, 1000);
 
+    // display the first question
+    displayQuestion();
+}
+
+function displayQuestion() {
+
+
+
+
+    
 }
 
 
