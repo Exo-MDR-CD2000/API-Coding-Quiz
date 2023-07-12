@@ -342,11 +342,16 @@ function startQuiz() {
     displayQuestion();
 }
 
+var remainingSeconds = 0;
+
+//the above variable will be used to store the remaining seconds when the user answers a question
+
 function startTimer(seconds) {
     secondsLeft = seconds;
     secondsEl.textContent = secondsLeft;
     timerInterval = setInterval(function() {
         secondsLeft--;
+        remainingSeconds = secondsLeft;
         secondsEl.textContent = secondsLeft;
         if (secondsLeft === 0) {
             clearInterval(timerInterval);
@@ -354,6 +359,8 @@ function startTimer(seconds) {
         }
     }, 1000);
 }
+
+//the above function will start the timer and display the remaining seconds
 
 //just realized that it would be better to sepererate the startquiz function and the timer function
 
