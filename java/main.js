@@ -388,6 +388,18 @@ function displayQuestion() {
     
 }
 
+function checkAnswer() {
+    var currentQuestion = questions[currentQuestionIndex];
+    if (currentQuestion.answer === currentQuestion.choices[0]) {
+        choicesFeedbackEl.textContent = "Correct!";
+    } else {
+        choicesFeedbackEl.textContent = "Wrong!";
+        secondsLeft -= 5;
+    }
+}
+
+//lines 382-389 display the question and answer choices, but does not check if the user's answer is correct or not. It also does not display the next question when the user answers the current question
+
 //the above will display the question and the answer choices. it was originally four lines but I condensed it into a for loop
 
 
