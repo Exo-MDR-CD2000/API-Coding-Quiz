@@ -113,180 +113,180 @@ var questions = [
     {
         question: "What is the output of the following code: console.log(typeof 'hello');",
         choices: [
-          "undefined",
-          "number",
-          "string",
-          "boolean",
+          "a) undefined",
+          "b) number",
+          "c) string",
+          "d) boolean",
         ],
         answer: 2
       },
       {
         question: "How do you convert a string to uppercase in JavaScript?",
         choices: [
-          "toLowerCase()",
-          "toUpperCase()",
-          "toUpperCasecase()",
-          "toUppercase()",
+          "a) toLowerCase()",
+          "b) toUpperCase()",
+          "c) toUpperCasecase()",
+          "d) toUppercase()",
         ],
         answer: 1
       },
       {
         question: "Which method is used to remove the last item from an array in JavaScript?",
         choices: [
-          "slice()",
-          "pop()",
-          "remove()",
-          "splice()",
+          "a) slice()",
+          "b) pop()",
+          "c) remove()",
+          "d) splice()",
         ],
         answer: 1
       },
       {
         question: "What does the '!' operator do in JavaScript?",
         choices: [
-          "Logical OR",
-          "Logical XOR",
-          "Logical AND",
-          "Logical NOT",
+          "a) Logical OR",
+          "b) Logical XOR",
+          "c) Logical AND",
+          "d) Logical NOT",
         ],
         answer: 3
       },
       {
         question: "Which built-in method returns the length of a string in JavaScript?",
         choices: [
-          "count()",
-          "length()",
-          "size()",
-          "getSize()",
+          "a) count()",
+          "b) length()",
+          "c) size()",
+          "d) getSize()",
         ],
         answer: 1
       },
       {
         question: "What is the output of the following code: console.log(5 + '5');",
         choices: [
-          "10",
-          "Error",
-          "25",
-          "55",
+          "a) 10",
+          "b) Error",
+          "c) 25",
+          "d) 55",
         ],
         answer: 3
       },
       {
         question: "Which method is used to add new elements to the end of an array in JavaScript?",
         choices: [
-          "concat()",
-          "add()",
-          "append()",
-          "push()",
+          "a) concat()",
+          "b) add()",
+          "c) append()",
+          "d) push()",
         ],
         answer: 3
       },
       {
         question: "What is the output of the following code: console.log(Number('10') + 5);",
         choices: [
-          "Error",
-          "NaN",
-          "105",
-          "15",
+          "a) Error",
+          "b) NaN",
+          "c) 105",
+          "d) 15",
         ],
         answer: 3
       },
       {
         question: "Which operator is used to check if two values are equal and of the same type in JavaScript?",
         choices: [
-          "==",
-          "=",
-          "===",
-          "!=",
+          "a) ==",
+          "b) =",
+          "c) ===",
+          "d) !=",
         ],
         answer: 2
       },
       {
         question: "Which event is triggered when the user clicks on an HTML element?",
         choices: [
-          "onchange",
-          "onload",
-          "onsubmit",
-          "onclick",
+          "a) onchange",
+          "b) onload",
+          "c) onsubmit",
+          "d) onclick",
         ],
         answer: 3
       },
       {
         question: "Which operator is used to assign a default value to a variable if the current value is null or undefined?", 
         choices: [
-            "||=",
-            "??=",
-            "??",
-            "||",
+            "a) ||= ",
+            "b) ??= ",
+            "c) ??",
+            "d) ||",
         ],
         answer: 2
       },
       {
         question: "What is the output of the following code: console.log(typeof 10);",
         choices: [
-          "undefined",
-          "number",
-          "string",
-          "boolean",
+          "a) undefined",
+          "b) number",
+          "c) string",
+          "d) boolean",
         ],
         answer: 1
       },
       {
         question: "How do you convert a string to lowercase in JavaScript?",
         choices: [
-          "toLowerCase()",
-          "toUpperCase()",
-          "toUpperCasecase()",
-          "toUppercase()",
+          "a) toLowerCase()",
+          "b) toUpperCase()",
+          "c) toUpperCasecase()",
+          "d) toUppercase()",
         ],
         answer: 0
       },
       {
         question: "Which method is used to remove the first item from an array in JavaScript?",
         choices: [
-          "slice()",
-          "shift()",
-          "remove()",
-          "splice()",
+          "a) slice()",
+          "b) shift()",
+          "c) remove()",
+          "d) splice()",
         ],
         answer: 1
       },
       {
         question: "What does the '&&' operator do in JavaScript?",
         choices: [
-          "Logical OR",
-          "Logical XOR",
-          "Logical AND",
-          "Logical NOT",
+          "a) Logical OR",
+          "b) Logical XOR",
+          "c) Logical AND",
+          "d) Logical NOT",
         ],
         answer: 2
       },
       {
         question: "Which built-in method removes the last element from an array and returns it?",
         choices: [
-          "delete()",
-          "pop()",
-          "remove()",
-          "splice()",
+          "a) delete()",
+          "b) pop()",
+          "c) remove()",
+          "d) splice()",
         ],
         answer: 1
       },
       {
         question: "What is the output of the following code: console.log('hello'.length);",
         choices: [
-          "6",
-          "Error",
-          "5",
-          "0",
+          "a) 6",
+          "b) Error",
+          "c) 5",
+          "d) 0",
         ],
         answer: 2
       },
       {
         question: "Which method is used to add new elements to the beginning of an array in JavaScript?",
         choices: [
-          "concat()",
-          "add()",
-          "append()",
-          "unshift()",
+          "a) concat()",
+          "b) add()",
+          "c) append()",
+          "d) unshift()",
         ],
         answer: 3
       },
@@ -311,10 +311,10 @@ var quizIntroBtnEl = document.getElementById("quiz-global-intro-start");
 var questionContainerEl = document.getElementById("question-global-box");
 var questionEl = document.getElementById("question-text");
 var answerChoicesEl = document.getElementById("choices-global");
-var choiceOneEl = document.getElementById("choice1");
-var choiceTwoEl = document.getElementById("choice2");
-var choiceThreeEl = document.getElementById("choice3");
-var choiceFourEl = document.getElementById("choice4");
+var choiceOneEl = document.getElementById("choice-1");
+var choiceTwoEl = document.getElementById("choice-2");
+var choiceThreeEl = document.getElementById("choice-3");
+var choiceFourEl = document.getElementById("choice-4");
 var choicesFeedbackEl = document.getElementById("choices-feedback");
 
 
@@ -385,6 +385,7 @@ function displayQuestion() {
     for (var i = 0; i < choiceEls.length; i++) {
         choiceEls[i].textContent = currentQuestion.choices[i];
     }
+    
 }
 
 //the above will display the question and the answer choices. it was originally four lines but I condensed it into a for loop
