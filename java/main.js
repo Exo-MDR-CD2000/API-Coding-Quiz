@@ -341,7 +341,7 @@ function startQuiz() {
     // the above should hide the quiz intro container and display the question container
 
     // start the timer with 20 seconds for each question
-    startTimer(20);
+    startTimer(5);
 
     // display the first question
     displayQuestion();
@@ -360,9 +360,20 @@ function startTimer(seconds) {
         secondsEl.textContent = secondsLeft;
         if (secondsLeft === 0) {
             clearInterval(timerInterval);
-            endQuiz();
+            alert("Time's up!");
+            confirm("Would you like to try again?");
+            refreshQuiz();
         }
     }, 1000);
+}
+
+function refreshQuiz() {
+    questionContainerEl.style.display = "none";
+    highscoreContainerEl.style.display = "none";
+    quizIntroEl.style.display = "block";
+    secondsLeft = 0;
+    secondsEl.textContent = secondsLeft;
+    currentQuest
 }
 
 //the above function will start the timer and display the remaining seconds
@@ -370,6 +381,9 @@ function startTimer(seconds) {
 //just realized that it would be better to sepererate the startquiz function and the timer function
 
 function displayQuestion() {
+    var currentQuestion = questions[currentQuestionIndex];
+    questionEl.textContent = currentQuestion.question;
+    choicesFeedbackEl.textContent = "";
 
 
 
