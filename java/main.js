@@ -373,7 +373,6 @@ function refreshQuiz() {
     quizIntroEl.style.display = "block";
     secondsLeft = 0;
     secondsEl.textContent = secondsLeft;
-    currentQuest
 }
 
 //the above function will start the timer and display the remaining seconds
