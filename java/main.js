@@ -33,7 +33,7 @@ var questions = [
     {
       question: "What is the correct way to write a JavaScript comment?",
       choices: [
-        "a)",
+        "a) /\*This is a comment\*/",
         "b) //This is a comment",
         "c) /This is a comment/",
         "d) \\This is a comment"
