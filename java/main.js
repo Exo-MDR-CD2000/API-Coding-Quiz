@@ -381,14 +381,13 @@ function refreshQuiz() {
 
 function displayQuestion() {
     var currentQuestion = questions[currentQuestionIndex];
-    questionEl.textContent = currentQuestion.question;
-    choicesFeedbackEl.textContent = "";
-
-
-
-
-    
+    var choiceEls = [choiceOneEl, choiceTwoEl, choiceThreeEl, choiceFourEl];
+    for (var i = 0; i < choiceEls.length; i++) {
+        choiceEls[i].textContent = currentQuestion.choices[i];
+    }
 }
+
+//the above will display the question and the answer choices. it was originally four lines but I condensed it into a for loop
 
 
 
