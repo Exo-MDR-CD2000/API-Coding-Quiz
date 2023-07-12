@@ -1,6 +1,6 @@
 //global vars
 var currentQuestionIndex = 0;
-var secondsLeft = 20;
+var secondsLeft = 0;
 var timerInterval;
 var score = 0;
 
@@ -341,7 +341,7 @@ function startQuiz() {
     // the above should hide the quiz intro container and display the question container
 
     // start the timer with 20 seconds for each question
-    startTimer(5);
+    startTimer(20);
 
     // display the first question
     displayQuestion();
@@ -380,6 +380,7 @@ function refreshQuiz() {
 //just realized that it would be better to sepererate the startquiz function and the timer function
 
 function displayQuestion() {
+    questionEl.textContent = questions[currentQuestionIndex].question;
     var currentQuestion = questions[currentQuestionIndex];
     var choiceEls = [choiceOneEl, choiceTwoEl, choiceThreeEl, choiceFourEl];
     for (var i = 0; i < choiceEls.length; i++) {
