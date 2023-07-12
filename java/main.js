@@ -393,6 +393,9 @@ function displayQuestion() {
 function checkAnswer() {
     var currentQuestion = questions[currentQuestionIndex];
     var userChoice = this.textContent;
+    clearInterval(timerInterval); //stops the timer
+
+    //the above stops the timer but i need to add another if statement so that the timer resets when the user answers the next question
     if (userChoice === currentQuestion.choices[currentQuestion.answer]) {
         choicesFeedbackEl.textContent = "Correct!";
     } else {
@@ -413,7 +416,7 @@ function checkAnswer() {
 }
 
 
-//TODO: my timer logic is flawd. the timer kee4ps going into the negatives and does not reset after the user answers a question. I need to fix this
+//TODO: my timer logic is flawd. the timer keeps going into the negatives and does not reset after the user answers a question. I need to fix this
 
 
 //lines 382-389 display the question and answer choices, but does not check if the user's answer is correct or not. It also does not display the next question when the user answers the current question
