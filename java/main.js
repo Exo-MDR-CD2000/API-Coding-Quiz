@@ -326,6 +326,11 @@ var highscoreFormEl = document.getElementById("highscore-form");
 var highscoreInputInitialsEl = document.getElementById("initials");
 var highscoreSubmitBtnEl = document.getElementById("submit-highscore");
 
+//hide the question container and highscore container until the user clicks the start button
+questionContainerEl.style.display = "none";
+highscoreContainerEl.style.display = "none";
+
+
 // I need to display the quiz intro container first
 
 function startQuiz() {
