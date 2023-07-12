@@ -125,3 +125,43 @@ function endQuiz() {
 // Add event listener to start quiz button
 var startBtnEl = document.querySelector("#start");
 startBtnEl.addEventListener("click", startQuiz);
+
+
+
+
+
+
+
+
+
+// BEGIN: ed8c6549bwf9
+function displayQuestion() {
+  var currentQuestion = questions[currentQuestionIndex];
+  var choiceEls = [choiceOneEl, choiceTwoEl, choiceThreeEl, choiceFourEl];
+  for (var i = 0; i < choiceEls.length; i++) {
+      choiceEls[i].textContent = currentQuestion.choices[i];
+      choiceEls[i].addEventListener("click", checkAnswer); // add event listener to each answer choice element
+  }
+  choicesFeedbackEl.textContent = ""; // reset feedback text
+}
+
+function checkAnswer(event) {
+  var userChoice = event.target.textContent;
+  var currentQuestion = questions[currentQuestionIndex];
+  if (userChoice === currentQuestion.answer) {
+      choicesFeedbackEl.textContent = "Correct!";
+  } else {
+      choicesFeedbackEl.textContent = "Wrong!";
+      secondsLeft -= 5; // subtract 5 seconds from timer
+  }
+  currentQuestionIndex++;
+  if (currentQuestionIndex < questions.length) {
+      displayQuestion(); // show next question
+  } else {
+      // quiz is over, show highscore container
+      questionContainerEl.style.display = "none";
+      highscoreContainerEl.style.display = "block";
+      highscoreTextEndEl.textContent = "You scored " + score + " out of " + questions.length + "!";
+  }
+}
+// END: ed8c6549bwf9

@@ -384,8 +384,9 @@ function displayQuestion() {
     var choiceEls = [choiceOneEl, choiceTwoEl, choiceThreeEl, choiceFourEl];
     for (var i = 0; i < choiceEls.length; i++) {
         choiceEls[i].textContent = currentQuestion.choices[i];
+        choiceEls[i].addEventListener("click", checkAnswer); //adds the event listener to each choice element
     }
-    
+    choicesFeedbackEl.textContent = ""; // this should clear the feedback text
 }
 
 function checkAnswer() {
@@ -394,8 +395,14 @@ function checkAnswer() {
         choicesFeedbackEl.textContent = "Correct!";
     } else {
         choicesFeedbackEl.textContent = "Wrong!";
-        secondsLeft -= 5;
+        secondsLeft -= 5; // this should subtract 5 seconds from the timer
     }
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+    displayQuestion();
+    } else {
+      endQuiz(); // this should check if the user has answered all the questions and if they have, it should end the quiz
+}
 }
 
 //lines 382-389 display the question and answer choices, but does not check if the user's answer is correct or not. It also does not display the next question when the user answers the current question
