@@ -336,7 +336,14 @@ function startQuiz() {
     // the above should hide the quiz intro container and display the question container
 
     // start the timer with 20 seconds for each question
-    secondsLeft = 20;
+    startTimer(20);
+
+    // display the first question
+    displayQuestion();
+}
+
+function startTimer(seconds) {
+    secondsLeft = seconds;
     secondsEl.textContent = secondsLeft;
     timerInterval = setInterval(function() {
         secondsLeft--;
@@ -346,10 +353,9 @@ function startQuiz() {
             endQuiz();
         }
     }, 1000);
-
-    // display the first question
-    displayQuestion();
 }
+
+//just realized that it would be better to sepererate the startquiz function and the timer function
 
 function displayQuestion() {
 
