@@ -391,7 +391,11 @@ function displayQuestion() {
 
 
 
-
+//The four processes of making a new element and appending it to the DOM
+// 1. create an Element and store it in an Element
+// 2. add attributes to the Element
+// 3. give the Element text
+// 4. append the Element to the DOM/page
 
 
 
