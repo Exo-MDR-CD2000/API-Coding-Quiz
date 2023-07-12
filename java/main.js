@@ -380,14 +380,14 @@ function refreshQuiz() {
 //just realized that it would be better to sepererate the startquiz function and the timer function
 
 function displayQuestion() {
-    questionEl.textContent = questions[currentQuestionIndex].question;
+    questionEl.textContent = questions[currentQuestionIndex].question; // displays the question
     var currentQuestion = questions[currentQuestionIndex];
     var choiceEls = [choiceOneEl, choiceTwoEl, choiceThreeEl, choiceFourEl];
     for (var i = 0; i < choiceEls.length; i++) {
         choiceEls[i].textContent = currentQuestion.choices[i];
         choiceEls[i].addEventListener("click", checkAnswer); //adds the event listener to each choice element
     }
-    choicesFeedbackEl.textContent = ""; // this should clear the feedback text
+    // choicesFeedbackEl.textContent = ""; // this should clear the feedback text
 }
 
 function checkAnswer() {
@@ -403,7 +403,12 @@ function checkAnswer() {
     displayQuestion();
     } else {
       endQuiz(); // this should check if the user has answered all the questions and if they have, it should end the quiz
-}
+    }
+    setTimeout(function() {
+      choicesFeedbackEl.textContent = "";
+    }, 500);
+// the above 3 lines adds a delay to the feedback text so that it shows for only half a second
+
 }
 
 //lines 382-389 display the question and answer choices, but does not check if the user's answer is correct or not. It also does not display the next question when the user answers the current question
