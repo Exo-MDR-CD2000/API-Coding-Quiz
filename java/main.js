@@ -1,5 +1,8 @@
 //global vars
-
+var currentQuestionIndex = 0;
+var secondsLeft = 60;
+var timerInterval;
+var score = 0;
 
 
 
@@ -332,4 +335,28 @@ function startQuiz() {
 
     // the above should hide the question container and highscore container while displaying the quiz intro container
 
+    // I need to start the timer when the quiz starts
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//bottom event listener
+quizIntroBtnEl.addEventListener("click", startQuiz);
