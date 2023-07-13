@@ -30,266 +30,266 @@ var questions = [
       ],
       answer: 2
     },
-    // {
-    //   question: "What is the correct way to write a JavaScript comment?",
-    //   choices: [
-    //     "a) /\*This is a comment\*/",
-    //     "b) //This is a comment",
-    //     "c) /This is a comment/",
-    //     "d) \\This is a comment"
-    //   ],
-    //   answer: 1
-    // },
-    // {
-    //   question: "How do you declare a function in JavaScript?",
-    //   choices: [
-    //     "a) function myFunction()",
-    //     "b) function = myFunction()",
-    //     "c) var myFunction = function()",
-    //     "d) def myFunction()"
-    //   ],
-    //   answer: 0
-    // },
-    // {
-    //   question: "How do you call a function named \"myFunction\"?",
-    //   choices: [
-    //     "a) call myFunction()",
-    //     "b) myFunction()",
-    //     "c) execute myFunction()",
-    //     "d) run myFunction()"
-    //   ],
-    //   answer: 1
-    // },
-    // {
-    //   question: "Which operator is used to assign a value to a variable in JavaScript?",
-    //   choices: [
-    //     "a) =",
-    //     "b) ==",
-    //     "c) :=",
-    //     "d) =>"
-    //   ],
-    //   answer: 0
-    // },
-    // {
-    //   question: "What is the correct way to write a conditional statement in JavaScript?",
-    //   choices: [
-    //     "a) if x = 5 then",
-    //     "b) if x == 5",
-    //     "c) if (x = 5)",
-    //     "d) if (x == 5)"
-    //   ],
-    //   answer: 3
-    // },
-    // {
-    //   question: "How do you concatenate two strings in JavaScript?",
-    //   choices: [
-    //     "a) string1 + string2",
-    //     "b) string1 . string2",
-    //     "c) string1 & string2",
-    //     "d) string1 ~ string2"
-    //   ],
-    //   answer: 0
-    // },
-    // {
-    //   question: "How do you write a for loop in JavaScript?",
-    //   choices: [
-    //     "a) loop(x=0; x<5; x++)",
-    //     "b) for (x=0; x<5; x++)",
-    //     "c) for loop(x=0; x<5; x++)",
-    //     "d) iterate(x=0; x<5; x++)"
-    //   ],
-    //   answer: 1
-    // },
-    // {
-    //   question: "What function is used to convert a string to a number in JavaScript?",
-    //   choices: [
-    //     "a) convertStringToNumber()",
-    //     "b) parseInt()",
-    //     "c) stringToNumber()",
-    //     "d) toNumber()"
-    //   ],
-    //   answer: 1
-    // },
-    // {
-    //     question: "What is the output of the following code: console.log(typeof 'hello');",
-    //     choices: [
-    //       "a) undefined",
-    //       "b) number",
-    //       "c) string",
-    //       "d) boolean",
-    //     ],
-    //     answer: 2
-    //   },
-    //   {
-    //     question: "How do you convert a string to uppercase in JavaScript?",
-    //     choices: [
-    //       "a) toLowerCase()",
-    //       "b) toUpperCase()",
-    //       "c) toUpperCasecase()",
-    //       "d) toUppercase()",
-    //     ],
-    //     answer: 1
-    //   },
-    //   {
-    //     question: "Which method is used to remove the last item from an array in JavaScript?",
-    //     choices: [
-    //       "a) slice()",
-    //       "b) pop()",
-    //       "c) remove()",
-    //       "d) splice()",
-    //     ],
-    //     answer: 1
-    //   },
-    //   {
-    //     question: "What does the '!' operator do in JavaScript?",
-    //     choices: [
-    //       "a) Logical OR",
-    //       "b) Logical XOR",
-    //       "c) Logical AND",
-    //       "d) Logical NOT",
-    //     ],
-    //     answer: 3
-    //   },
-    //   {
-    //     question: "Which built-in method returns the length of a string in JavaScript?",
-    //     choices: [
-    //       "a) count()",
-    //       "b) length()",
-    //       "c) size()",
-    //       "d) getSize()",
-    //     ],
-    //     answer: 1
-    //   },
-    //   {
-    //     question: "What is the output of the following code: console.log(5 + '5');",
-    //     choices: [
-    //       "a) 10",
-    //       "b) Error",
-    //       "c) 25",
-    //       "d) 55",
-    //     ],
-    //     answer: 3
-    //   },
-    //   {
-    //     question: "Which method is used to add new elements to the end of an array in JavaScript?",
-    //     choices: [
-    //       "a) concat()",
-    //       "b) add()",
-    //       "c) append()",
-    //       "d) push()",
-    //     ],
-    //     answer: 3
-    //   },
-    //   {
-    //     question: "What is the output of the following code: console.log(Number('10') + 5);",
-    //     choices: [
-    //       "a) Error",
-    //       "b) NaN",
-    //       "c) 105",
-    //       "d) 15",
-    //     ],
-    //     answer: 3
-    //   },
-    //   {
-    //     question: "Which operator is used to check if two values are equal and of the same type in JavaScript?",
-    //     choices: [
-    //       "a) ==",
-    //       "b) =",
-    //       "c) ===",
-    //       "d) !=",
-    //     ],
-    //     answer: 2
-    //   },
-    //   {
-    //     question: "Which event is triggered when the user clicks on an HTML element?",
-    //     choices: [
-    //       "a) onchange",
-    //       "b) onload",
-    //       "c) onsubmit",
-    //       "d) onclick",
-    //     ],
-    //     answer: 3
-    //   },
-    //   {
-    //     question: "Which operator is used to assign a default value to a variable if the current value is null or undefined?", 
-    //     choices: [
-    //         "a) ||= ",
-    //         "b) ??= ",
-    //         "c) ??",
-    //         "d) ||",
-    //     ],
-    //     answer: 2
-    //   },
-    //   {
-    //     question: "What is the output of the following code: console.log(typeof 10);",
-    //     choices: [
-    //       "a) undefined",
-    //       "b) number",
-    //       "c) string",
-    //       "d) boolean",
-    //     ],
-    //     answer: 1
-    //   },
-    //   {
-    //     question: "How do you convert a string to lowercase in JavaScript?",
-    //     choices: [
-    //       "a) toLowerCase()",
-    //       "b) toUpperCase()",
-    //       "c) toUpperCasecase()",
-    //       "d) toUppercase()",
-    //     ],
-    //     answer: 0
-    //   },
-    //   {
-    //     question: "Which method is used to remove the first item from an array in JavaScript?",
-    //     choices: [
-    //       "a) slice()",
-    //       "b) shift()",
-    //       "c) remove()",
-    //       "d) splice()",
-    //     ],
-    //     answer: 1
-    //   },
-    //   {
-    //     question: "What does the '&&' operator do in JavaScript?",
-    //     choices: [
-    //       "a) Logical OR",
-    //       "b) Logical XOR",
-    //       "c) Logical AND",
-    //       "d) Logical NOT",
-    //     ],
-    //     answer: 2
-    //   },
-    //   {
-    //     question: "Which built-in method removes the last element from an array and returns it?",
-    //     choices: [
-    //       "a) delete()",
-    //       "b) pop()",
-    //       "c) remove()",
-    //       "d) splice()",
-    //     ],
-    //     answer: 1
-    //   },
-    //   {
-    //     question: "What is the output of the following code: console.log('hello'.length);",
-    //     choices: [
-    //       "a) 6",
-    //       "b) Error",
-    //       "c) 5",
-    //       "d) 0",
-    //     ],
-    //     answer: 2
-    //   },
-    //   {
-    //     question: "Which method is used to add new elements to the beginning of an array in JavaScript?",
-    //     choices: [
-    //       "a) concat()",
-    //       "b) add()",
-    //       "c) append()",
-    //       "d) unshift()",
-    //     ],
-    //     answer: 3
-    //   },
+    {
+      question: "What is the correct way to write a JavaScript comment?",
+      choices: [
+        "a) /\*This is a comment\*/",
+        "b) //This is a comment",
+        "c) /This is a comment/",
+        "d) \\This is a comment"
+      ],
+      answer: 1
+    },
+    {
+      question: "How do you declare a function in JavaScript?",
+      choices: [
+        "a) function myFunction()",
+        "b) function = myFunction()",
+        "c) var myFunction = function()",
+        "d) def myFunction()"
+      ],
+      answer: 0
+    },
+    {
+      question: "How do you call a function named \"myFunction\"?",
+      choices: [
+        "a) call myFunction()",
+        "b) myFunction()",
+        "c) execute myFunction()",
+        "d) run myFunction()"
+      ],
+      answer: 1
+    },
+    {
+      question: "Which operator is used to assign a value to a variable in JavaScript?",
+      choices: [
+        "a) =",
+        "b) ==",
+        "c) :=",
+        "d) =>"
+      ],
+      answer: 0
+    },
+    {
+      question: "What is the correct way to write a conditional statement in JavaScript?",
+      choices: [
+        "a) if x = 5 then",
+        "b) if x == 5",
+        "c) if (x = 5)",
+        "d) if (x == 5)"
+      ],
+      answer: 3
+    },
+    {
+      question: "How do you concatenate two strings in JavaScript?",
+      choices: [
+        "a) string1 + string2",
+        "b) string1 . string2",
+        "c) string1 & string2",
+        "d) string1 ~ string2"
+      ],
+      answer: 0
+    },
+    {
+      question: "How do you write a for loop in JavaScript?",
+      choices: [
+        "a) loop(x=0; x<5; x++)",
+        "b) for (x=0; x<5; x++)",
+        "c) for loop(x=0; x<5; x++)",
+        "d) iterate(x=0; x<5; x++)"
+      ],
+      answer: 1
+    },
+    {
+      question: "What function is used to convert a string to a number in JavaScript?",
+      choices: [
+        "a) convertStringToNumber()",
+        "b) parseInt()",
+        "c) stringToNumber()",
+        "d) toNumber()"
+      ],
+      answer: 1
+    },
+    {
+        question: "What is the output of the following code: console.log(typeof 'hello');",
+        choices: [
+          "a) undefined",
+          "b) number",
+          "c) string",
+          "d) boolean",
+        ],
+        answer: 2
+      },
+      {
+        question: "How do you convert a string to uppercase in JavaScript?",
+        choices: [
+          "a) toLowerCase()",
+          "b) toUpperCase()",
+          "c) toUpperCasecase()",
+          "d) toUppercase()",
+        ],
+        answer: 1
+      },
+      {
+        question: "Which method is used to remove the last item from an array in JavaScript?",
+        choices: [
+          "a) slice()",
+          "b) pop()",
+          "c) remove()",
+          "d) splice()",
+        ],
+        answer: 1
+      },
+      {
+        question: "What does the '!' operator do in JavaScript?",
+        choices: [
+          "a) Logical OR",
+          "b) Logical XOR",
+          "c) Logical AND",
+          "d) Logical NOT",
+        ],
+        answer: 3
+      },
+      {
+        question: "Which built-in method returns the length of a string in JavaScript?",
+        choices: [
+          "a) count()",
+          "b) length()",
+          "c) size()",
+          "d) getSize()",
+        ],
+        answer: 1
+      },
+      {
+        question: "What is the output of the following code: console.log(5 + '5');",
+        choices: [
+          "a) 10",
+          "b) Error",
+          "c) 25",
+          "d) 55",
+        ],
+        answer: 3
+      },
+      {
+        question: "Which method is used to add new elements to the end of an array in JavaScript?",
+        choices: [
+          "a) concat()",
+          "b) add()",
+          "c) append()",
+          "d) push()",
+        ],
+        answer: 3
+      },
+      {
+        question: "What is the output of the following code: console.log(Number('10') + 5);",
+        choices: [
+          "a) Error",
+          "b) NaN",
+          "c) 105",
+          "d) 15",
+        ],
+        answer: 3
+      },
+      {
+        question: "Which operator is used to check if two values are equal and of the same type in JavaScript?",
+        choices: [
+          "a) ==",
+          "b) =",
+          "c) ===",
+          "d) !=",
+        ],
+        answer: 2
+      },
+      {
+        question: "Which event is triggered when the user clicks on an HTML element?",
+        choices: [
+          "a) onchange",
+          "b) onload",
+          "c) onsubmit",
+          "d) onclick",
+        ],
+        answer: 3
+      },
+      {
+        question: "Which operator is used to assign a default value to a variable if the current value is null or undefined?", 
+        choices: [
+            "a) ||= ",
+            "b) ??= ",
+            "c) ??",
+            "d) ||",
+        ],
+        answer: 2
+      },
+      {
+        question: "What is the output of the following code: console.log(typeof 10);",
+        choices: [
+          "a) undefined",
+          "b) number",
+          "c) string",
+          "d) boolean",
+        ],
+        answer: 1
+      },
+      {
+        question: "How do you convert a string to lowercase in JavaScript?",
+        choices: [
+          "a) toLowerCase()",
+          "b) toUpperCase()",
+          "c) toUpperCasecase()",
+          "d) toUppercase()",
+        ],
+        answer: 0
+      },
+      {
+        question: "Which method is used to remove the first item from an array in JavaScript?",
+        choices: [
+          "a) slice()",
+          "b) shift()",
+          "c) remove()",
+          "d) splice()",
+        ],
+        answer: 1
+      },
+      {
+        question: "What does the '&&' operator do in JavaScript?",
+        choices: [
+          "a) Logical OR",
+          "b) Logical XOR",
+          "c) Logical AND",
+          "d) Logical NOT",
+        ],
+        answer: 2
+      },
+      {
+        question: "Which built-in method removes the last element from an array and returns it?",
+        choices: [
+          "a) delete()",
+          "b) pop()",
+          "c) remove()",
+          "d) splice()",
+        ],
+        answer: 1
+      },
+      {
+        question: "What is the output of the following code: console.log('hello'.length);",
+        choices: [
+          "a) 6",
+          "b) Error",
+          "c) 5",
+          "d) 0",
+        ],
+        answer: 2
+      },
+      {
+        question: "Which method is used to add new elements to the beginning of an array in JavaScript?",
+        choices: [
+          "a) concat()",
+          "b) add()",
+          "c) append()",
+          "d) unshift()",
+        ],
+        answer: 3
+      },
   ];
   
 
