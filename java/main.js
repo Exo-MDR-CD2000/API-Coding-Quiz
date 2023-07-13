@@ -475,6 +475,8 @@ clearInterval(timerInterval);
 questionContainerEl.style.display = "none";
 highscoreContainerEl.style.display = "block";
 
+//the highscoreNumberEl is where the user's score will be displayed (Use this one to display number on screen)
+//the highscoreDisplayEl is the general text that will be displayed 
 
 //display the user's score
 
