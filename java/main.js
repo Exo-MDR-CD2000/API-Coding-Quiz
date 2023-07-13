@@ -494,7 +494,7 @@ highscoreSubmitBtnEl.addEventListener("click", function(event) {
   event.preventDefault();
 
   var newScore = {
-    initials: highscoreInputInitialsEl.vale,
+    initials: highscoreInputInitialsEl.value,
     score: remainingSeconds.value
   };
 
