@@ -615,3 +615,8 @@ quizIntroBtnEl.addEventListener("click", startQuiz);
 //     // Redirect to high scores page
 //     window.location.href = "highscores.html";
 //   }
+
+
+
+
+//TODO 7-13-2023: I just realized that the scoring system does work but only for array 0. Why is only working for the first mutiple choice option and not the others?
