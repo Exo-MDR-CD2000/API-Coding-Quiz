@@ -760,3 +760,10 @@ function checkAnswer() {
   } else {
     endQuiz();
   }
+
+
+
+
+  document.addEventListener("DOMContentLoaded", function() {
+    var scoreText = document.getElementById("highscoreNumberEl").textContent;
+    console.log(scoreText);

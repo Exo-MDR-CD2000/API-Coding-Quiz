@@ -469,49 +469,86 @@ function checkAnswer() {
 
 // next function should end the quiz and display the highscore container
 
+
 function endQuiz() {
-clearInterval(timerInterval);
-
-//hide the question container and display the highscore container
-questionContainerEl.style.display = "none";
-highscoreContainerEl.style.display = "block";
-
-//the highscoreNumberEl is where the user's score will be displayed (Use this one to display number on screen)
-//the highscoreDisplayEl is the general text that will be displayed 
-
-//display the user's score
-
-highScoreNumberEl.textContent = remainingSeconds; // this will display the user's score from the remainingSeconds var
-
-//now add initials. use the highscoreInputInitialsEl var to store the user's initials
-
-// var userInitials = highscoreInputInitialsEl.value; // this will store the user's initials in a var
+  clearInterval(timerInterval);
+  questionContainerEl.style.display = "none";
+  highscoreContainerEl.style.display = "block";
+}
 
 
-//make the butotn click event to store the user's initials and score in local storage
-//the highscoreSubmitBtnEl is the html element that the user will click to submit their initials and score
 
-highscoreSubmitBtnEl.addEventListener("click", function(event) {
-  event.preventDefault();
+function highscoreSubmit() {
 
-  var newScore = {
-    initials: highscoreInputInitialsEl.value.substring(0, 3), // only store the first three characters of the initials
-    score: remainingSeconds
-  };
 
-  localStorage.setItem("newScore", JSON.stringify(newScore));
-  renderScores();
-  event.preventDefault();
-});
+
+
+
+
+}
+  document.addEventListener("submit", function(event) {
+
+
+
+
 
 }
 
-function renderScores() {
-  var lastScore = JSON.parse(localStorage.getItem("newScore"));
-  if (lastScore !== null) {
-    document.querySelector("#highscoreDisplayEl").textContent = lastScore.initials + " " + lastScore.score;
-  }
-}
+
+
+
+// function endQuiz() {
+// clearInterval(timerInterval);
+
+// //hide the question container and display the highscore container
+// questionContainerEl.style.display = "none";
+// highscoreContainerEl.style.display = "block";
+
+// //the highscoreNumberEl is where the user's score will be displayed (Use this one to display number on screen)
+// //the highscoreDisplayEl is the general text that will be displayed 
+
+// //display the user's score
+
+
+
+
+
+// // var scoretext = document.getElementById("highscoreNumberEl");
+// // scoretext.textContent = remainingSeconds;
+// // console.log(scoretext);
+// // console.log(remainingSeconds);
+
+// // highScoreNumberEl.textContent = remainingSeconds; // this will display the user's score from the remainingSeconds var
+
+// //now add initials. use the highscoreInputInitialsEl var to store the user's initials
+
+// // var userInitials = highscoreInputInitialsEl.value; // this will store the user's initials in a var
+
+
+// //make the butotn click event to store the user's initials and score in local storage
+// //the highscoreSubmitBtnEl is the html element that the user will click to submit their initials and score
+
+// highscoreSubmitBtnEl.addEventListener("click", function(event) {
+//   event.preventDefault();
+
+//   var newScore = {
+//     initials: highscoreInputInitialsEl.value.substring(0, 3), // only store the first three characters of the initials
+//     score: remainingSeconds
+//   };
+
+//   localStorage.setItem("newScore", JSON.stringify(newScore));
+//   renderScores();
+//   event.preventDefault();
+// });
+
+// }
+
+// function renderScores() {
+//   var lastScore = JSON.parse(localStorage.getItem("newScore"));
+//   if (lastScore !== null) {
+//     document.querySelector("#highscoreDisplayEl").textContent = lastScore.initials + " " + lastScore.score;
+//   }
+// }
 
 //TODO: scores are not being stored in local storage. I need to fix this
 
