@@ -8,6 +8,10 @@ The goal was to create a simple quiz that would show javascript coding questions
 
 No CSS styling was done as I was focusing on creating the quiz and logic first. There are simply CSS template files with nothing in them. In the repository, you mar or may not notice some additional JS files besides the main.js file. These were used to test and store unused code that I was experimenting with. I left them in the repository as a reminder of what I was trying to do and how I was trying to do it.
 
+In class JS activities were used as a reference for this project as well as collaberating with other classmates. I also used the following sites as a reference for this project:
+
+[JS Cheat Sheet](https://htmlcheatsheet.com/js/)
+
 
 ## Screenshot
 
