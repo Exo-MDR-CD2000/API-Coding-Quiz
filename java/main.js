@@ -472,10 +472,11 @@ console.log(remainingSeconds);
 
 
 function endQuiz() {
-  clearInterval(timerInterval);
+  // clearInterval(timerInterval);
   questionContainerEl.style.display = "none";
   highscoreContainerEl.style.display = "block";
   highscoreNumberEl.textContent = remainingSeconds;
+  console.log(remainingSeconds);
 }
 
 //TODO: highscore is flawed since it only displays the last score and not the total high score
