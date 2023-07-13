@@ -480,25 +480,27 @@ highscoreContainerEl.style.display = "block";
 
 //display the user's score
 
-ScoreDisplayEl.textContent = remainingSeconds; // this will display the user's score from the remainingSeconds var
+highScoreNumberEl.textContent = remainingSeconds; // this will display the user's score from the remainingSeconds var
 
 //now add initials. use the highscoreInputInitialsEl var to store the user's initials
 
-var userInitials = highscoreInputInitialsEl.value; // this will store the user's initials in a var
+// var userInitials = highscoreInputInitialsEl.value; // this will store the user's initials in a var
 
 
+//make the butotn click event to store the user's initials and score in local storage
+//the highscoreSubmitBtnEl is the html element that the user will click to submit their initials and score
 
+highscoreSubmitBtnEl.addEventListener("click", function(event) {
+  event.preventDefault();
+  var userInitials = highscoreInputInitialsEl.value;
 
+  //the below will store the user's initials and score in local storage
+  //highscoreInputInitialsEl is the html element that the user will type their initials in
+  localStorage.setItem("userInitials", userInitials);
+  localStorage.setItem("remainingSeconds", remainingSeconds);
 
-
-
-
-
-
-
-
-
-
+  //the below will display the user's initials and score in the highscore container
+});
 }
 
 
