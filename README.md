@@ -14,7 +14,7 @@ The goal was to create a simple quiz that would show javascript coding questions
 
 ## Usage
 
-
+Use the inspect tool on your preferred browser to see the HTML structure of the page. You can also view the JS files. Localstorage is currently broken and does not display anything.
 
 
 ## Deployment Link
