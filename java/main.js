@@ -463,6 +463,7 @@ function checkAnswer() {
       choicesFeedbackEl.textContent = "";
   }, 1000);
 }
+console.log(remainingSeconds);
 // the above 4 lines adds a delay to the feedback text so that it shows for only half a second
 
 
@@ -474,25 +475,18 @@ function endQuiz() {
   clearInterval(timerInterval);
   questionContainerEl.style.display = "none";
   highscoreContainerEl.style.display = "block";
+  highscoreNumberEl.textContent = remainingSeconds;
 }
 
+//TODO: highscore is flawed since it only displays the last score and not the total high score
 
-
-function highscoreSubmit() {
-
-
-
-
-
-
-}
-  document.addEventListener("submit", function(event) {
-
-
-
-
-
-}
+//now add a function that will display the user's score and initials
+// function displayScore() {
+//   var scoretext = document.getElementById("highscoreNumberEl");
+//   scoretext.textContent = remainingSeconds;
+//   console.log(scoretext);
+//   console.log(remainingSeconds);
+// }
 
 
 
