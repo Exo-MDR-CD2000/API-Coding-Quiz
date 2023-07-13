@@ -1,11 +1,10 @@
 //global vars
 var currentQuestionIndex = 0;
-var totalTimeinMemory = 0;
-var questionTime = 20;
-var timerInterval;
+var secondsLeft = 20; // this is the actual timer itself
+var timerInterval; // not used yet
 var score = 0;
 
-
+var remainingSeconds = 0; // ok so this is what actually stores the remaining seconds when the user answers a question
 
 
 
@@ -348,7 +347,7 @@ function startQuiz() {
     displayQuestion();
 }
 
-var remainingSeconds = 0;
+
 
 //the above variable will be used to store the remaining seconds when the user answers a question
 
@@ -391,34 +390,76 @@ function displayQuestion() {
     // choicesFeedbackEl.textContent = ""; // this should clear the feedback text
 }
 
-function checkAnswer() {
-    var currentQuestion = questions[currentQuestionIndex];
-    var userChoice = this.textContent;
-    clearInterval(timerInterval); //stops the timer
 
-    //the above stops the timer but i need to add another if statement so that the timer resets when the user answers the next question
-    if (userChoice === currentQuestion.choices[currentQuestion.answer]) {
-        choicesFeedbackEl.textContent = "Correct!";
-        totalTimeinMemory += remainingSeconds;
-    } else {
-        choicesFeedbackEl.textContent = "Wrong!";
-        if (secondsLeft > 5) { //this checks if the timer is greater than 5 seconds, then
-            secondsLeft -= 5; // it subtract 5 seconds from the timer
-        } else { // if the timer is less than 5 seconds, then
-        secondsLeft = 0; // this should set the timer to 0
-    }
-    currentQuestionIndex++;
-    if (currentQuestionIndex < questions.length) {
-      startTimer(questionTime);
-    displayQuestion();
-    } else {
-      endQuiz(); // this should check if the user has answered all the questions and if they have, it should end the quiz
-    }
-    setTimeout(function() {
-      choicesFeedbackEl.textContent = "";
-    }, 500);
+// function checkAnswer() {
+//     var currentQuestion = questions[currentQuestionIndex];
+//     var userChoice = this.textContent;
+//     clearInterval(timerInterval); //stops the timer
+
+//     //the above stops the timer but i need to add another if statement so that the timer resets when the user answers the next question
+//     if (userChoice === currentQuestion.choices[currentQuestion.answer]) {
+//         choicesFeedbackEl.textContent = "Correct!"; 
+//         //add the remaining seconds to the remainingSeconds var
+
+//     } else {
+//         choicesFeedbackEl.textContent = "Wrong!";
+//         if (secondsLeft > 5) { //this checks if the timer is greater than 5 seconds, then
+//             secondsLeft -= 5; // it subtract 5 seconds from the timer
+//         } else { // if the timer is less than 5 seconds, then
+//         secondsLeft = 0; // this should set the timer to 0
+//       }
+//     }
+//     currentQuestionIndex++;
+//     if (currentQuestionIndex < questions.length) {
+//       startTimer(questionTime);
+//     displayQuestion();
+//     } else {
+//       endQuiz(); // this should check if the user has answered all the questions and if they have, it should end the quiz
+//     }
+//     setTimeout(function() {
+//       choicesFeedbackEl.textContent = "";
+//     }, 500);
+//   }
 // the above 3 lines adds a delay to the feedback text so that it shows for only half a second
 
+
+
+function checkAnswer() {
+  var currentQuestion = questions[currentQuestionIndex];
+  var userChoice = this.textContent;
+
+  clearInterval(timerInterval);
+
+  if (userChoice === currentQuestion.choices[currentQuestion.answer]) {
+      choicesFeedbackEl.textContent = "Correct!";
+  } 
+  else {
+      choicesFeedbackEl.textContent = "Wrong!";
+      if (secondsLeft < 5){
+        remainingSeconds += secondsLeft;
+          secondsLeft = 0;
+      }
+      else {
+          secondsLeft -= 5;
+          remainingSeconds += secondsLeft;
+      }
+      // secondsLeft = Math.max(0, secondsLeft - 5); // this should subtract 5 seconds from the timer
+  }
+
+  // remainingSeconds += secondsLeft;
+  currentQuestionIndex++;
+
+  if (currentQuestionIndex < questions.length) {
+      startTimer(20);
+      displayQuestion();
+  } 
+  else {
+      endQuiz();
+  }
+
+  setTimeout(function() {
+      choicesFeedbackEl.textContent = "";
+  }, 500);
 }
 
 
