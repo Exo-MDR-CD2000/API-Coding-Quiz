@@ -479,6 +479,31 @@ function endQuiz() {
   console.log(remainingSeconds);
 }
 
+
+
+highscoreSubmitBtnEl.addEventListener("click", function(event) {
+  event.preventDefault();
+
+  //get user initials and score
+
+  var initials = highscoreInputInitialsEl.value.trim();
+  if (initials === "") {
+    var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+    highsScores.push({
+      initials: initials,
+      score: remainingSeconds,
+  });
+  localStorage.setItem("highScores", JSON.stringify(highScores));
+
+  //redirects to highscore page
+  window.location.href = "highscore.html";
+}
+});
+
+
+//TODO: still can't figure out the json and setItem stuff. Despite the highscore only displaying the last score, i still can't figure out how to save it to local storage
+
+
 //TODO: highscore is flawed since it only displays the last score and not the total high score
 
 //now add a function that will display the user's score and initials
