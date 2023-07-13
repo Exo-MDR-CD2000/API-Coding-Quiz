@@ -323,6 +323,8 @@ var choicesFeedbackEl = document.getElementById("choices-feedback");
 var highscoreContainerEl = document.getElementById("highscore-global-box");
 var highscoreTextEndEl = document.getElementById("end-quiz");
 var highscoreFormEl = document.getElementById("highscore-form");
+var highscoreDisplayEl = document.getElementById("highscore-display");
+var highscoreNumberEl = document.getElementById("highscore-number");
 var highscoreInputInitialsEl = document.getElementById("initials");
 var highscoreSubmitBtnEl = document.getElementById("submit-highscore");
 
@@ -461,6 +463,38 @@ function checkAnswer() {
       choicesFeedbackEl.textContent = "";
   }, 500);
 }
+
+
+
+// next function should end the quiz and display the highscore container
+
+function endQuiz() {
+clearInterval(timerInterval);
+
+//hide the question container and display the highscore container
+questionContainerEl.style.display = "none";
+highscoreContainerEl.style.display = "block";
+
+
+//display the user's score
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
 
 
 //TODO: my timer logic is flawd. the timer keeps going into the negatives and does not reset after the user answers a question. I need to fix this
