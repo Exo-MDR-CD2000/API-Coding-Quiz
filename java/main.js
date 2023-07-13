@@ -494,12 +494,13 @@ highscoreSubmitBtnEl.addEventListener("click", function(event) {
   event.preventDefault();
 
   var newScore = {
-    initials: highscoreInputInitialsEl.value,
-    score: remainingSeconds.value
+    initials: highscoreInputInitialsEl.value.substring(0, 3), // only store the first three characters of the initials
+    score: remainingSeconds
   };
 
   localStorage.setItem("newScore", JSON.stringify(newScore));
   renderScores();
+  event.preventDefault();
 });
 
 }
@@ -512,6 +513,8 @@ function renderScores() {
 }
 
 //TODO: scores are not being stored in local storage. I need to fix this
+
+//TODO: still not working.
 
 
 //TODO: my timer logic is flawd. the timer keeps going into the negatives and does not reset after the user answers a question. I need to fix this
