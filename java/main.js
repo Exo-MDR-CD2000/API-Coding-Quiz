@@ -1,8 +1,8 @@
 //global vars
 var currentQuestionIndex = 0;
 var secondsLeft = 20; // this is the actual timer itself
-var timerInterval; // not used yet
-var score = 0;
+var timerInterval; // used in the startTimer function
+var score = 0; // not used yet
 
 var remainingSeconds = 0; // ok so this is what actually stores the remaining seconds when the user answers a question
 
@@ -438,11 +438,11 @@ function checkAnswer() {
   else {
       choicesFeedbackEl.textContent = "Wrong!";
       if (secondsLeft < 5){
-        remainingSeconds += secondsLeft;
+        remainingSeconds += secondsLeft; // shorthand for remainingSeconds = remainingSeconds + secondsLeft
           secondsLeft = 0;
       }
       else {
-          secondsLeft -= 5;
+          secondsLeft -= 5; // shorthand for secondsLeft = secondsLeft - 5
           remainingSeconds += secondsLeft;
       }
       // secondsLeft = Math.max(0, secondsLeft - 5); // this should subtract 5 seconds from the timer
@@ -461,8 +461,9 @@ function checkAnswer() {
 
   setTimeout(function() {
       choicesFeedbackEl.textContent = "";
-  }, 500);
+  }, 1000);
 }
+// the above 4 lines adds a delay to the feedback text so that it shows for only half a second
 
 
 
@@ -535,17 +536,25 @@ function renderScores() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 //bottom event listener
 quizIntroBtnEl.addEventListener("click", startQuiz);
+
+
+
+
+
+
+// submitBtn.addEventListener("click", function (event) {
+//   event.preventDefault();
+//   // Get the user's initials and score
+//   var initials = initialsInputEl.value.trim();
+//   if (initials !== "") {
+//     var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+//     highScores.push({
+//       initials: initials,
+//       score: userScore,
+//     });
+//     localStorage.setItem("highScores", JSON.stringify(highScores));
+//     // Redirect to high scores page
+//     window.location.href = "highscores.html";
+//   }
