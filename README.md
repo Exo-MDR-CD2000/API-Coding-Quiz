@@ -25,6 +25,6 @@ Use the inspect tool on your preferred browser to see the HTML structure of the 
 
 ## Deployment Link
 
-Deployed Page: [Github Deployed Page]()
+Deployed Page: [Github Deployed Page](https://exo-mdr-cd2000.github.io/API-Coding-Quiz/)
 
 Github repo: [API-Coding-Quiz](https://github.com/Exo-MDR-CD2000/API-Coding-Quiz)
