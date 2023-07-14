@@ -457,32 +457,64 @@ function endQuiz() {
   console.log(remainingSeconds);
 }
 
+// highscoreSubmitBtnEl.addEventListener("click", function (event) {
+//   event.preventDefault();
+//   console.log("hello!");
+
+//   //get user initials and score
+
+//   var initials = highscoreInputInitialsEl.value.trim();
+//   var highScores = JSON.parse(localStorage.getItem("highScores")) || []; // this is saying that if there is nothing in local storage, then it should be an empty array
+//   if (initials === length >= 3) {
+//     // this only works if initials are empty. maybe make an if else statement if the initials are not empty
+//    // var highScores = JSON.parse(localStorage.getItem("highScores")) || []; // put this above
+//     highScores.push({
+//       initials: initials,
+//       score: remainingSeconds,
+//     });
+//     console.log(initials);
+
+//     localStorage.setItem("highScores", JSON.stringify(highScores));
+
+//     //redirects to highscore page
+//     window.location.href = "highscore.html";
+//   }
+//   console.log(highScores);
+// });
+
+// ------------------
+
+
+
 highscoreSubmitBtnEl.addEventListener("click", function (event) {
   event.preventDefault();
-  console.log("hello!");
+  console.log("Is this working down here?");
 
   //get user initials and score
 
-  var initials = highscoreInputInitialsEl.value.trim();
-  var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
-  if (initials === length >= 3) {
-    // this only works if initials are empty. maybe make an if else statement if the initials are not empty
-   // var highScores = JSON.parse(localStorage.getItem("highScores")) || []; // put this above
-    highScores.push({
-      initials: initials,
-      score: remainingSeconds,
-    });
-    console.log(initials);
 
-    localStorage.setItem("highScores", JSON.stringify(highScores));
+  var initialsAndScore = highscoreInputInitialsEl.value.trim();
 
-    //redirects to highscore page
-    window.location.href = "highscore.html";
+  initialsAndScore = {
+    initials: initials,
+    score: remainingSeconds,
   }
-  console.log(highScores);
+
+console.log (initialsAndScore);
+
+  window.localStorage.setItem("initialsAndScore", JSON.stringify(initialsAndScore));
+
+  if (initiallsAndScore === length >= 3) {
+    alert("Please enter your initials");
+    return;
+  }
+  else {
+    window.localStorage.setItem("initialsAndScore", JSON.stringify(initialsAndScore));
+  }
 });
 
-// ------------------
+//one step foward two steps back with this. I can see the localstorage but the initials are not being saved.
+
 
 //i really want to fix this and call it a night 7-13-2023 7:40pm
 
