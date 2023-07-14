@@ -463,7 +463,7 @@ function endQuiz() {
 
 //   //get user initials and score
 
-//   var initials = highscoreInputInitialsEl.value.trim();
+//   var initials = highscoreInputInitialsEl.value.trim(); // this is getting only the value property from the element
 //   var highScores = JSON.parse(localStorage.getItem("highScores")) || []; // this is saying that if there is nothing in local storage, then it should be an empty array
 //   if (initials === length >= 3) {
 //     // this only works if initials are empty. maybe make an if else statement if the initials are not empty
@@ -492,25 +492,33 @@ highscoreSubmitBtnEl.addEventListener("click", function (event) {
 
   //get user initials and score
 
+  var initials = highscoreInputInitialsEl.value.trim();
 
-  var initialsAndScore = highscoreInputInitialsEl.value.trim();
-
-  initialsAndScore = {
+  var initialsAndScore = {
     initials: initials,
     score: remainingSeconds,
   }
 
+
+  //line 497 is an object and bundles both the initals and score. figure out why it is being overwritten
+  // var initialsAndScore = JSON.parse(localStorage.getItem("initialsAndScore")) || [];
+
+  //get existing data from localStorage
+  //var  = localStorage.getItem("initialsAndScore")) || [];
+  
 console.log (initialsAndScore);
+console.log(initials)
 
   window.localStorage.setItem("initialsAndScore", JSON.stringify(initialsAndScore));
 
-  if (initiallsAndScore === length >= 3) {
+  if (initialsAndScore.initials.length !== 3) { // 
     alert("Please enter your initials");
     return;
   }
   else {
     window.localStorage.setItem("initialsAndScore", JSON.stringify(initialsAndScore));
   }
+
 });
 
 //one step foward two steps back with this. I can see the localstorage but the initials are not being saved.
@@ -619,3 +627,37 @@ quizIntroBtnEl.addEventListener("click", startQuiz);
 //   }
 
 //TODO 7-13-2023: I just realized that the scoring system does work but only for array 0. Why is only working for the first mutiple choice option and not the others?
+
+
+
+
+
+
+
+
+
+
+// the code below works but it doesnt add a new key in localstorage for each new initialsAndScore
+
+// highscoreSubmitBtnEl.addEventListener("click", function (event) {
+//   event.preventDefault();
+//   console.log("Is this working down here?");
+
+//   //get user initials and score
+//   var initials = highscoreInputInitialsEl.value.trim();
+//   var score = remainingSeconds;
+
+//   //retrieve existing data from localStorage
+//   var initialsAndScores = JSON.parse(localStorage.getItem("initialsAndScores")) || [];
+
+//   //append new data to existing data
+//   initialsAndScores.push({ initials: initials, score: score });
+
+//   //store updated data back into localStorage
+//   localStorage.setItem("initialsAndScores", JSON.stringify(initialsAndScores));
+
+//   if (initials.length < 3) {
+//     alert("Please enter your initials");
+//     return;
+//   }
+// });
