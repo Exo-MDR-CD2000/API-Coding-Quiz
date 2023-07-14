@@ -511,7 +511,7 @@ console.log(initials)
 
   window.localStorage.setItem("initialsAndScore", JSON.stringify(initialsAndScore));
 
-  if (initialsAndScore.initials.length !== 3) { // 
+  if (initialsAndScore.initials.length !== 3) { // this willa actually check if the initials are 3 characters long.
     alert("Please enter your initials");
     return;
   }
