@@ -2,7 +2,7 @@
 
 //this is the function that will display the highscore
 function displayHighscore() {
-    
+    initialsAndScores.pull
     
     
     

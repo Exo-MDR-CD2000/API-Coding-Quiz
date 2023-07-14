@@ -486,40 +486,40 @@ function endQuiz() {
 
 
 
-highscoreSubmitBtnEl.addEventListener("click", function (event) {
-  event.preventDefault();
-  console.log("Is this working down here?");
+// highscoreSubmitBtnEl.addEventListener("click", function (event) {
+//   event.preventDefault();
+//   console.log("Is this working down here?");
 
-  //get user initials and score
+//   //get user initials and score
 
-  var initials = highscoreInputInitialsEl.value.trim();
+//   var initials = highscoreInputInitialsEl.value.trim();
 
-  var initialsAndScore = {
-    initials: initials,
-    score: remainingSeconds,
-  }
+//   var initialsAndScore = {
+//     initials: initials,
+//     score: remainingSeconds,
+//   }
 
 
-  //line 497 is an object and bundles both the initals and score. figure out why it is being overwritten
-  // var initialsAndScore = JSON.parse(localStorage.getItem("initialsAndScore")) || [];
+//   //line 497 is an object and bundles both the initals and score. figure out why it is being overwritten
+//   // var initialsAndScore = JSON.parse(localStorage.getItem("initialsAndScore")) || [];
 
-  //get existing data from localStorage
-  //var  = localStorage.getItem("initialsAndScore")) || [];
+//   //get existing data from localStorage
+//   //var  = localStorage.getItem("initialsAndScore")) || [];
   
-console.log (initialsAndScore);
-console.log(initials)
+// console.log (initialsAndScore);
+// console.log(initials)
 
-  window.localStorage.setItem("initialsAndScore", JSON.stringify(initialsAndScore));
+//   window.localStorage.setItem("initialsAndScore", JSON.stringify(initialsAndScore));
 
-  if (initialsAndScore.initials.length !== 3) { // this willa actually check if the initials are 3 characters long.
-    alert("Please enter your initials");
-    return;
-  }
-  else {
-    window.localStorage.setItem("initialsAndScore", JSON.stringify(initialsAndScore));
-  }
+//   if (initialsAndScore.initials.length !== 3) { // this will actually check if the initials are 3 characters long.
+//     alert("Please enter your initials");
+//     return;
+//   }
+//   else {
+//     window.localStorage.setItem("initialsAndScore", JSON.stringify(initialsAndScore));
+//   }
 
-});
+// });
 
 //one step foward two steps back with this. I can see the localstorage but the initials are not being saved.
 
@@ -639,25 +639,32 @@ quizIntroBtnEl.addEventListener("click", startQuiz);
 
 // the code below works but it doesnt add a new key in localstorage for each new initialsAndScore
 
-// highscoreSubmitBtnEl.addEventListener("click", function (event) {
-//   event.preventDefault();
-//   console.log("Is this working down here?");
+highscoreSubmitBtnEl.addEventListener("click", function (event) {
+  event.preventDefault();
+  console.log("Is this working down here?");
 
-//   //get user initials and score
-//   var initials = highscoreInputInitialsEl.value.trim();
-//   var score = remainingSeconds;
+  //get user initials and score
+  var initials = highscoreInputInitialsEl.value.trim();
+  var score = remainingSeconds;
 
-//   //retrieve existing data from localStorage
-//   var initialsAndScores = JSON.parse(localStorage.getItem("initialsAndScores")) || [];
+  //retrieve existing data from localStorage
+  var initialsAndScores = JSON.parse(localStorage.getItem("initialsAndScores")) || [];
 
-//   //append new data to existing data
-//   initialsAndScores.push({ initials: initials, score: score });
+  //append new data to existing data
+  initialsAndScores.push({ initials: initials, score: score }); // this seems to  be pushing a new object into the array
 
-//   //store updated data back into localStorage
-//   localStorage.setItem("initialsAndScores", JSON.stringify(initialsAndScores));
+ 
+  //store updated data back into localStorage
+  // localStorage.setItem("initialsAndScores", JSON.stringify(initialsAndScores));
 
-//   if (initials.length < 3) {
-//     alert("Please enter your initials");
-//     return;
-//   }
-// });
+  if (initials.length !== 3) {
+    alert("Please enter your initials");
+    return;
+  }else {
+      window.localStorage.setItem("initialsAndScores", JSON.stringify(initialsAndScores));
+  }
+  console.log(initialsAndScores);
+
+  window.location.href = "highscore.html";
+  
+});
