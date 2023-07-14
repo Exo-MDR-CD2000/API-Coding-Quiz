@@ -608,9 +608,6 @@ function endQuiz() {
 // 3. give the Element text
 // 4. append the Element to the DOM/page
 
-//bottom event listener
-quizIntroBtnEl.addEventListener("click", startQuiz);
-
 // submitBtn.addEventListener("click", function (event) {
 //   event.preventDefault();
 //   // Get the user's initials and score
@@ -668,3 +665,7 @@ highscoreSubmitBtnEl.addEventListener("click", function (event) {
   window.location.href = "highscore.html";
   
 });
+
+
+//bottom event listener
+quizIntroBtnEl.addEventListener("click", startQuiz);
