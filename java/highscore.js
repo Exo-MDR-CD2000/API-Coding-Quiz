@@ -7,3 +7,11 @@ function displayHighscore() {
     
     
 }
+
+
+
+
+
+
+
+// link main.js to highscore.js
